@@ -1,0 +1,394 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url("/Asset/circuits3b.png");
+  font-family: var(--font1);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    180deg,
+    var(--secondary-bg-color-opacity),
+    var(--teriary-bg-color-opacity),
+    var(--secondary-bg-color-opacity)
+  );
+  /* padding-top: 25px; */
+  min-height: 100vh;
+}
+
+/*-----------------------------TEXT_ICON_TITLE-----------------------------*/
+p {
+  font-size: max(0.9vw, 12px);
+}
+
+.ul_annonce{
+   margin: 18px 0 0 15px; 
+  font-size: max(0.9vw, 12px);
+}
+
+.icon_recrut {
+  font-size: max(1vw, 13px);
+  margin: 15px 2vw;
+  
+}
+.title {
+  margin-top: 25px;
+  color: var(--primary-bg-color-white);
+}
+
+/*------------X----------------TEXT_LOGO_TITLE---------------X-------------*/
+
+/* -----------------------------ANNONCES EMPLOIS-----------------------------*/
+.list_annonce {
+  margin: 0 4vw;
+}
+
+
+h1 {
+  margin: 9vw 0 2vw 5vw;
+  padding-bottom: 50px;
+}
+
+h2 {
+  margin: 1.5vw 0 0 2vw;
+  font-size: max(1.2vw, 15.5px);
+}
+
+h4 {
+  font-size: max(1vw, 14px);
+  text-align: center;
+}
+.text_annonce {
+  margin: 1vw 2vw;
+}
+
+.bi-clock {
+  margin-left: 1vw;
+}
+
+.section_recrut {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0px 0px 10vh;
+}
+
+.annonce1,
+.annonce2,
+.annonce3 {
+  width: 40vw;
+  border: none;
+  min-width: 290px;
+  margin-bottom: 1vw;
+  border-radius: 20px;
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(100px);
+  position: relative;
+  color: var(--primary-bg-color-white);
+
+  background: linear-gradient(
+    0deg,
+    rgba(18, 77, 120, 1) 0%,
+    rgba(18, 77, 120, 1) 8%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.annonce1::before,
+.annonce2::before,
+.annonce3::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+  /*Positionne verticalement la bordure plus la valeur négative est élevée, plus la bordure s'éloigne du bouton.*/
+  width: 80%;
+  height: 2px;
+  background: var(--quaternary-bg-color);
+  box-shadow: 0 0 5px var(--quaternary-bg-color),
+    0 0 10px var(--quaternary-bg-color), 0 0 15px var(--quaternary-bg-color),
+    0 0 30px var(--quaternary-bg-color);
+}
+
+.annonce3::before {
+  display: none;
+}
+
+button {
+  width: max(6.5vw, 80px);
+  padding: 8px;
+  border: none;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  justify-content: center;
+  cursor: pointer;
+  background-color: var(--quinternary-bg-color);
+}
+
+.button_recrut {
+  display: flex;
+  flex-direction: row;
+  margin: 1vw 2vw 0.5vw;
+  justify-content: flex-end;
+}
+
+.postuler {
+  font-size: max(0.8vw, 10px);
+  font-weight: bold;
+}
+
+.offre {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.Pagerecrute {
+  min-width: 295px;
+  max-width: 295px;
+  min-height: 150px;
+  max-height: 150px;
+}
+
+/*-----------X--------------ANNONCES EMPLOIS--------------X--------------*/
+
+/*-----------------------------DEPOSE CV ET ALERTE ANNONCE-----------------------------*/
+.container_cv {
+  width: 35vw;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.icon_alert {
+  display: flex;
+  justify-content: center;
+}
+
+.alert_recrut,
+.alert_recrut2,
+.inscription_alert {
+  width: 25vw;
+  display: flex;
+  margin-bottom: 1vw;
+  align-items: center;
+  border-radius: 20px;
+  flex-direction: column;
+}
+
+.alert_recrut {
+  margin-top: 150px;
+  border: rgb(255, 255, 255) solid 1px;
+  background: var(--primary-bg-color-white);
+  box-shadow: 4px 4px 10px var(--quinternary-bg-color);
+}
+
+.alert_recrut2 {
+  margin-top: 20px;
+  border: rgb(255, 255, 255) solid 1px;
+  background: var(--primary-bg-color-white);
+  box-shadow: 4px 4px 10px var(--quinternary-bg-color);
+}
+
+.alert_recrut_para {
+  padding: 0 1vw;
+  margin: 0.5vw 0 0.5vw;
+}
+
+img {
+  height: 3vw;
+  width: 3vw;
+}
+
+.icon_alert {
+  width: 5vw;
+  height: 5vw;
+  margin: 1vw 0;
+  display: flex;
+  font-size: 70px;
+  border-radius: 100%;
+  align-items: center;
+  justify-content: center;
+  background: var(--quinternary-bg-color);
+  border: var(--quinternary-bg-color) solid 1px;
+}
+/*----------------------------- POPUP *-----------------------------*/
+.overlay {
+  margin: 0;
+  top: 0%;
+  width: 100%;
+  display: none;
+  padding: 20vh 0px 40vh 0px;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.781);
+  z-index: 2;
+}
+
+h3 {
+  text-align: center;
+  padding: 1vw;
+}
+
+form {
+  width: max(20vw, 270px);
+  font-size: max(1vw, 13px);
+  padding: 13px;
+  box-shadow: 0 2px 5px #f5f5f5;
+  background-color: var(--primary-bg-color-white);
+  border-radius: 10px;
+}
+
+input,
+textarea {
+  width: calc(100% - 18px);
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #1c87c9;
+  outline: none;
+}
+
+button:hover {
+  background: var(--teriary-bg-color);
+  color: var(--primary-bg-color-white);
+}
+
+.button_pull {
+  display: flex;
+  justify-content: center;
+}
+/*-------------x--------------- POPUP *----------------x------------*/
+
+/*----------------------------- Media query----------------------------- */
+@media only screen and (max-width: 700px){
+  h2 {
+    text-align: center;
+  }
+
+  main {
+    padding-top: 30px;
+  }
+
+  h1{
+    margin: 10vw 0 2vw 2vw;
+  }
+
+
+  .section_recrut {
+    flex-direction: column;
+    width: 100%;
+    margin: 0px 0px 5vh;
+    padding-top: 25px;
+    align-items: center;
+  }
+
+  .alert_recrut2,
+  .alert_recrut {
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px);
+    position: relative;
+    padding: 10px;
+  }
+
+  .alert_recrut {
+    margin-top: 0;
+  }
+  .alert_recrut2 {
+    margin: 50px 0 60px;
+  }
+
+  .alert_recrut::before,
+  .alert_recrut2::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -32px;
+    /*Positionne verticalement la bordure plus la valeur négative est élevée, plus la bordure s'éloigne du bouton.*/
+    width: 80%;
+    height: 2px;
+    background: var(--quaternary-bg-color);
+    box-shadow: 0 0 5px var(--quaternary-bg-color),
+      0 0 10px var(--quaternary-bg-color), 0 0 15px var(--quaternary-bg-color),
+      0 0 30px var(--quaternary-bg-color);
+  }
+
+  .offre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .annonce1,
+  .annonce2,
+  .annonce3 {
+    margin-bottom: 50px;
+  }
+
+  .annonce3::before {
+    display: block;
+  }
+
+  .annonce1::before,
+  .annonce2::before,
+  .annonce3::before {
+    bottom: -26px;
+  }
+
+  .alert_recrut,
+  .alert_recrut2,
+  .inscription_alert {
+    min-width: 290px;
+  }
+
+  .container_cv {
+    align-items: center;
+  }
+
+  .alert_recrut_para {
+    text-align: center;
+    margin: 5.5 vw 0 0 1.5vw;
+  }
+
+  #button1,
+  #button2,
+  #button3 {
+    padding: 1.6vw;
+  }
+
+  .button_recrut {
+    display: flex;
+    flex-direction: row;
+    margin: 4vw 2vw 0.5vw;
+    justify-content: center;
+  }
+  .icon_alert {
+    width: 40px;
+    height: 40px;
+  }
+
+  img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media only screen and (max-width: 1025px){
+  h1{
+    margin: 10vw 0 2vw 2vw;
+  }
+
+}
+/*--------------X-------------- Media query------------------X---------- */
+
+/*--------------X--------------DEPOSE CV ET ALERTE ANNONCE--------------X--------------*/
